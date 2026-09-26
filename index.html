@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Real-time weather dashboard">
+
+    <title>WeatherFlow | Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div>
+
+                <p class="subtitle">
+                    LIVE WEATHER
+                </p>
+
+                <h1>WeatherFlow</h1>
+
+                <p class="description">
+                    Check real-time weather anywhere in the world.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- SEARCH -->
+
+        <section class="search-section">
+
+            <form id="weatherForm">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    aria-label="Enter city name"
+                    required
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ERROR MESSAGE -->
+
+        <div
+            id="errorMessage"
+            class="error-message"
+            role="alert"
+            hidden>
+        </div>
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loading"
+            class="loading"
+            hidden>
+
+            <div class="spinner"></div>
+
+            <p>Loading weather...</p>
+
+        </div>
+
+
+        <!-- WEATHER DASHBOARD -->
+
+        <section
+            id="weatherDashboard"
+            class="dashboard"
+            hidden>
+
+            <!-- LOCATION -->
+
+            <div class="location-card">
+
+                <div>
+
+                    <p class="label">
+                        CURRENT LOCATION
+                    </p>
+
+                    <h2 id="cityName">
+                        Coimbatore
+                    </h2>
+
+                    <p id="country">
+                        India
+                    </p>
+
+                </div>
+
+                <div class="weather-icon">
+
+                    <img
+                        id="weatherIcon"
+                        src=""
+                        alt="Weather condition">
+
+                </div>
+
+            </div>
+
+
+            <!-- TEMPERATURE -->
+
+            <div class="temperature-card">
+
+                <p class="label">
+                    TEMPERATURE
+                </p>
+
+                <h2>
+                    <span id="temperature">--</span>°C
+                </h2>
+
+                <p id="description">
+                    --
+                </p>
+
+                <p>
+                    Feels like
+                    <strong>
+                        <span id="feelsLike">--</span>°C
+                    </strong>
+                </p>
+
+            </div>
+
+
+            <!-- WEATHER METRICS -->
+
+            <div class="metrics">
+
+                <article class="metric-card">
+
+                    <span class="metric-icon">
+                        💧
+                    </span>
+
+                    <div>
+
+                        <p>Humidity</p>
+
+                        <strong>
+                            <span id="humidity">--</span>%
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="metric-card">
+
+                    <span class="metric-icon">
+                        💨
+                    </span>
+
+                    <div>
+
+                        <p>Wind Speed</p>
+
+                        <strong>
+                            <span id="windSpeed">--</span>
+                            m/s
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="metric-card">
+
+                    <span class="metric-icon">
+                        🌡️
+                    </span>
+
+                    <div>
+
+                        <p>Pressure</p>
+
+                        <strong>
+                            <span id="pressure">--</span>
+                            hPa
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <article class="metric-card">
+
+                    <span class="metric-icon">
+                        👁️
+                    </span>
+
+                    <div>
+
+                        <p>Visibility</p>
+
+                        <strong>
+                            <span id="visibility">--</span>
+                            km
+                        </strong>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- EXTRA INFORMATION -->
+
+            <div class="extra-info">
+
+                <div>
+
+                    <span>🌅 Sunrise</span>
+
+                    <strong id="sunrise">
+                        --
+                    </strong>
+
+                </div>
+
+                <div>
+
+                    <span>🌇 Sunset</span>
+
+                    <strong id="sunset">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
